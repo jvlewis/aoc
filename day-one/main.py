@@ -4,22 +4,22 @@ def retrieveInput(file):
 
 # brute force
 # def sumTwoN(values, n):
-
 #   for i in values:
 #     for j in values[1:]:
 #       return int(i) * int(j)
 #   return -1
 
-# def sumTwoN(values, n):
+# first solution
+def productTwoN(values, n):
+  pastVals = []
+  for x in values:
+    val = int(x)
+    temp = n - val  
+    if temp in pastVals:
+      return temp * val 
+    pastVals.append(val)
 
-#   pastVals = []
-#   for x in values:
-#     val = int(x)
-#     temp = n - val  
-#     if temp in pastVals:
-#       return temp * val 
-#     pastVals.append(val)
-
+# second solution
 # find the product of three digits in an array that sum to a target
 def productThreeN(values, target):
   pastVals = []
