@@ -1,7 +1,7 @@
 # AOC Day 6
 import re
 
-# returns an array of strings of group 'yes' answers
+# returns an array of strings, with each containing a string of 'yes' answers
 def retrieveInput(file):
     temp = ""
     answers = []
