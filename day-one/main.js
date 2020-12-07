@@ -1,7 +1,8 @@
 const fs = require("fs");
-const year = new Date().getFullYear();
 
+const year = new Date().getFullYear();
 const accounts = fs.readFileSync("account.txt", "utf-8");
+
 const findProductOfTwo = (ledger) => {
   let pastValues = [];
   let firstVal, temp;
