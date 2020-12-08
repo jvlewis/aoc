@@ -1,4 +1,3 @@
-# returns an array of file lines
 def retrieveInput(file):
   return open(file, "r").read().splitlines()
 
