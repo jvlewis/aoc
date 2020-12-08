@@ -5,11 +5,11 @@ def retrieveInput(file):
 input = retrieveInput("input.txt")
 
 # solution one
-def countPossibleContainers(contained, rules):
+def countPossibleContainers(contained, regs):
     bags = dict()
     temp = []
 
-    for x in rules:
+    for x in regs:
         x = x.split("bags contain")
         bags[x[0].strip()] = x[1].replace("bags", "").replace("bag", "").replace(".", "").strip()
 
