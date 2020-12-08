@@ -40,8 +40,7 @@ def bagDict(bagContains):
 def processBaggage(bagRegs):
     bagRegDict = {}
     for reg in bagRegs:
-        key = reg.split(' bags contain ')[0]
-        value = reg.split(' bags contain ')[1]
+        key, value = reg.split(' bags contain ')
         bagRegDict[key] = bagDict(value)
     return bagRegDict
 
