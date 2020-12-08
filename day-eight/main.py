@@ -10,27 +10,34 @@ def createHistory(inp):
 inp = retrieveInput("input.txt")
 historyArr = createHistory(inp)
 
+def processInstruction(cmd, acc, hist, ind, sequential=True):
+    if cmd[0] == 'acc':
+        hist[ind][1] += 1
+        acc = eval(str(acc) + cmd[1][0] + str(cmd[1][1:]))
+        ind += 1
+    elif cmd[0] == 'jmp':
+        hist[ind][1] += 1
+        ind = (eval(str(ind) + cmd[1][0] + str(cmd[1][1:])))
+        if not sequential:
+            ind = ind % len(hist)
+    else:
+        hist[ind][1] += 1
+        ind += 1 
+
+    return acc, hist, ind   
+
 # solution one
 def processInstructions(commands):
-  sum = 0
+  total = 0
   i = 0
 
   while True: 
-    instructions = commands[i][0].split(' ')
+    instruction = commands[i][0].split(' ')
 
     if commands[i][1] > 0:
-      return sum
+      return total
 
-    if instructions[0] == 'acc':
-      commands[i][1] += 1
-      sum = eval(str(sum) + instructions[1][0] + str(instructions[1][1:]))
-      i += 1
-    elif instructions[0] == 'jmp':
-      commands[i][1] += 1
-      i = (eval(str(i) + instructions[1][0] + str(instructions[1][1:]))) % len(commands)
-    else:
-      commands[i][1] += 1
-      i += 1
+    total, commands, i = processInstruction(instruction, total, commands, i, False)
 
 #solution two
 def correctInstructions(commands):
@@ -58,23 +65,14 @@ def correctInstructions(commands):
 
       while i < len(freshTry):
         if i == tried - 1:
-          instructions = changedInstruct.split(' ')
+          instruction = changedInstruct.split(' ')
         else:
-          instructions = freshTry[i][0].split(' ')
+          instruction = freshTry[i][0].split(' ')
 
         if freshTry[i][1] > 0:
           break
 
-        if instructions[0] == 'acc':
-          freshTry[i][1] += 1
-          total = eval(str(total) + instructions[1][0] + str(instructions[1][1:]))
-          i += 1
-        elif instructions[0] == 'jmp':
-          freshTry[i][1] += 1
-          i = (eval(str(i) + instructions[1][0] + str(instructions[1][1:])))
-        else:
-          freshTry[i][1] += 1
-          i += 1
+        total, freshTry, i = processInstruction(instruction, total, freshTry, i)
         
         if i >= len(commands):
           return total
