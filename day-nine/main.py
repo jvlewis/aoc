@@ -20,16 +20,17 @@ def findOutlier(stream, pre):
 def findWeakness(stream, pre):
     outlier = findOutlier(stream, pre)
 
-    for i in range(0, len(stream) - 2):
-        j = i + 2
-        total = 0
-        temp = []
-        while total < outlier:
-            temp = stream[i:j]
-            total = sum(temp)
-            j += 1
-        if total == outlier:
-            return min(temp) + max(temp)
+    if outlier:
+        for i in range(0, len(stream) - 2):
+            j = i + 2
+            total = 0
+            temp = []
+            while total < outlier:
+                temp = stream[i:j]
+                total = sum(temp)
+                j += 1
+            if total == outlier:
+                return min(temp) + max(temp)
     return None
 
         
