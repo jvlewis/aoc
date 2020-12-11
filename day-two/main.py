@@ -42,5 +42,5 @@ def processPasswordsTwo(rulesAndWords):
 
     return valid
 
-
+print(processPasswords(retrieveInput("input.txt")))
 print(processPasswordsTwo(retrieveInput("input.txt")))
