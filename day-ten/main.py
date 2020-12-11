@@ -36,7 +36,7 @@ def findAllChains(adapters):
         # for each adapter, record a sum of previous sums, 
         # within the acceptable jolt range
         result[x] = sum(result[x - i] for i in range(1, 4))
-    # last entry hold the total
+    # last entry holds the total
     print(result[-1])
 
 
