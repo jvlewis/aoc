@@ -15,8 +15,6 @@ def findOneAndThree(adapters):
     elif x - last == 3:
       diff3 += 1
       last = x
-    else:
-      continue
 
   diff3 += 1 
 
