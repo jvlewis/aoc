@@ -3,7 +3,6 @@ def processInput(file):
 
 # solution one
 def findOneAndThree(adapters):
-  maxAdapter = adapters[-1]
   diff1 = diff2 = diff3 = last = 0
   for x in adapters:
     if x - last == 1:
