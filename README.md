@@ -241,17 +241,17 @@ By modeling the process people use to choose (or abandon) their seat in the wait
 
 The seat layout fits neatly on a grid. Each position is either floor (.), an empty seat (L), or an occupied seat (#). For example, the initial seat layout might look like this:
 
--|-|-|-|-|-|-|-|-|-|
-L|.|L|L|.|L|L|.|L|L|
-L|L|L|L|L|L|L|.|L|L|
-L|.|L|.|L|.|.|L|.|.|
-L|L|L|L|.|L|L|.|L|L|
-L|.|L|L|.|L|L|.|L|L|
-L|.|L|L|L|L|L|.|L|L|
-.|.|L|.|L|.|.|.|.|.|
-L|L|L|L|L|L|L|L|L|L|
-L|.|L|L|L|L|L|L|.|L|
-L|.|L|L|L|L|L|.|L|L|
+<code>L.LL.LL.LL
+LLLLLLL.LL
+L.L.L..L..
+LLLL.LL.LL
+L.LL.LL.LL
+L.LLLLL.LL
+..L.L.....
+LLLLLLLLLL
+L.LLLLLL.L
+L.LLLLL.LL
+</code>
 
 Now, you just need to model the people who will be arriving shortly. Fortunately, people are entirely predictable and always follow a simple set of rules. All decisions are based on the number of occupied seats adjacent to a given seat (one of the eight positions immediately up, down, left, right, or diagonal from the seat). The following rules are applied to every seat simultaneously:
 
