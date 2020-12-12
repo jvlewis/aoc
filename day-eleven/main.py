@@ -1,4 +1,5 @@
 # must refactor...no time...
+# brute madness
 
 def retrieveInput(file):
     temp = open(file, "r").read().splitlines()
