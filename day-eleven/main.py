@@ -1,3 +1,5 @@
+# must refactor...no time...
+
 def retrieveInput(file):
     temp = open(file, "r").read().splitlines()
     for i in range(len(temp)):
