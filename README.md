@@ -5,7 +5,7 @@
 After saving Christmas **five years in a row**,
 you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
 
-The tropical island has its own currency and is entirely cash-only. The gold coins used there have a little picture of a starfish;
+The tropical island has its own currency and is entirely cash*-*only. The gold coins used there have a little picture of a starfish;
 the locals just call them **stars**. None of the currency exchanges seem to have heard of them,
 but somehow, you'll need to find fifty of these coins by the time you arrive so you can pay the deposit on your room.
 
@@ -40,7 +40,7 @@ Official Toboggan Corporate Policy that was in effect when they were chosen.
 To try to debug the problem, they have created a list (your puzzle input) of **passwords**
 (according to the corrupted database) and **the corporate policy when that password was set**.
 
-Each line gives the password policy and then the password. The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. For example, 1-3 a means that the password must contain a at least 1 time and at most 3 times.
+Each line gives the password policy and then the password. The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. For example, 1*-*3 a means that the password must contain a at least 1 time and at most 3 times.
 
 \*How many passwords are valid\*\* according to their policies?
 
@@ -67,8 +67,8 @@ Always prepared, you make a list of all of the joltage adapters in your bag.
 Each of your joltage adapters is rated for a specific **output joltage** (your puzzle input).
 Any given adapter can take an input 1, 2, or 3 jolts **lower** than its rating and still produce its rated output joltage.
 
-In addition, your device has a built-in joltage adapter rated for **3 jolts higher** than the highest-rated adapter in your bag.
-(If your adapter list were 3, 9, and 6, your device's built-in adapter would be rated for 12 jolts.)
+In addition, your device has a built*-*in joltage adapter rated for **3 jolts higher** than the highest*-*rated adapter in your bag.
+(If your adapter list were 3, 9, and 6, your device's built*-*in adapter would be rated for 12 jolts.)
 
 Treat the charging outlet near your seat as having an effective joltage rating of 0.
 
@@ -78,25 +78,25 @@ Wouldn't want to get to your resort and realize you can't even charge your devic
 If you **use every adapter in your bag** at once, what is the distribution of joltage differences
 between the charging outlet, the adapters, and your device?
 
-Because adapters can only connect to a source 1-3 jolts lower than its rating,
+Because adapters can only connect to a source 1*-*3 jolts lower than its rating,
 in order to use every adapter, you'd need to choose them like this:
 
 The charging outlet has an effective rating of 0 jolts, so the only adapters that could connect to it directly
 would need to have a joltage rating of 1, 2, or 3 jolts. Of these, only one you have is an adapter rated 1 jolt (difference of 1).
-From your 1-jolt rated adapter, the only choice is your 4-jolt rated adapter (difference of 3).
-From the 4-jolt rated adapter, the adapters rated 5, 6, or 7 are valid choices. However, in order to not skip any adapters,
+From your 1*-*jolt rated adapter, the only choice is your 4*-*jolt rated adapter (difference of 3).
+From the 4*-*jolt rated adapter, the adapters rated 5, 6, or 7 are valid choices. However, in order to not skip any adapters,
 you have to pick the adapter rated 5 jolts (difference of 1).
 Similarly, the next choices would need to be the adapter rated 6 and then the adapter rated 7 (with difference of 1 and 1).
-The only adapter that works with the 7-jolt rated adapter is the one rated 10 jolts (difference of 3).
+The only adapter that works with the 7*-*jolt rated adapter is the one rated 10 jolts (difference of 3).
 From 10, the choices are 11 or 12; choose 11 (difference of 1) and then 12 (difference of 1).
 After 12, only valid adapter has a rating of 15 (difference of 3), then 16 (difference of 1), then 19 (difference of 3).
-Finally, your device's built-in adapter is always 3 higher than the highest adapter, so its rating is 22 jolts (always a difference of 3).
+Finally, your device's built*-*in adapter is always 3 higher than the highest adapter, so its rating is 22 jolts (always a difference of 3).
 In this example, when using every adapter, there are 7 differences of 1 jolt and 5 differences of 3 jolts.
 
-Find a chain that uses all of your adapters to connect the charging outlet to your device's built-in adapter and count the joltage
+Find a chain that uses all of your adapters to connect the charging outlet to your device's built*-*in adapter and count the joltage
 differences between the charging outlet, the adapters, and your device.
 
-**What is the number of 1-jolt differences multiplied by the number of 3-jolt differences?**
+**What is the number of 1*-*jolt differences multiplied by the number of 3*-*jolt differences?**
 
 ### Part Two
 
@@ -118,9 +118,9 @@ The seat layout fits neatly on a grid. Each position is either floor (.), an emp
 
 Now, you just need to model the people who will be arriving shortly. Fortunately, people are entirely predictable and always follow a simple set of rules. All decisions are based on the number of occupied seats adjacent to a given seat (one of the eight positions immediately up, down, left, right, or diagonal from the seat). The following rules are applied to every seat simultaneously:
 
--If a seat is **empty** (L) and there are **no** occupied seats adjacent to it, the seat becomes **occupied**.
--If a seat is **occupied** (#) and **four or more** seats adjacent to it are also occupied, the seat becomes **empty**.
--Otherwise, the seat's state does not change.
+*-*If a seat is **empty** (L) and there are **no** occupied seats adjacent to it, the seat becomes **occupied**.
+*-*If a seat is **occupied** (#) and **four or more** seats adjacent to it are also occupied, the seat becomes **empty**.
+*-*Otherwise, the seat's state does not change.
 
 Floor (.) never changes; seats don't move, and nobody sits on the floor.
 
@@ -130,7 +130,7 @@ Simulate your seating area by applying the seating rules repeatedly until no sea
 
 ### Part Two
 
-As soon as people start to arrive, you realize your mistake. People don't just care about adjacent seats -
+As soon as people start to arrive, you realize your mistake. People don't just care about adjacent seats _-_
 they care about **the first seat they can see** in each of those eight directions!
 
 Now, instead of considering just the eight immediately adjacent seats, consider the **first seat** in each of those eight directions.
@@ -151,16 +151,16 @@ Your ferry made decent progress toward the island, but the storm came in faster 
 Unfortunately, the ship's navigation computer seems to be malfunctioning; rather than giving a route directly to safety,
 it produced extremely circuitous instructions. When the captain uses the PA system to ask if anyone can help, you quickly volunteer.
 
-The navigation instructions (your puzzle input) consists of a sequence of single-character **actions** paired with integer input **values.**
+The navigation instructions (your puzzle input) consists of a sequence of single*-*character **actions** paired with integer input **values.**
 After staring at them for a few minutes, you work out what they probably mean:
 
--Action N means to move north by the given value.
--Action S means to move south by the given value.
--Action E means to move east by the given value.
--Action W means to move west by the given value.
--Action L means to turn left the given number of degrees.
--Action R means to turn right the given number of degrees.
--Action F means to move forward by the given value in the direction the ship is currently facing.
+*-*Action N means to move north by the given value.
+*-*Action S means to move south by the given value.
+*-*Action E means to move east by the given value.
+*-*Action W means to move west by the given value.
+*-*Action L means to turn left the given number of degrees.
+*-*Action R means to turn right the given number of degrees.
+*-*Action F means to move forward by the given value in the direction the ship is currently facing.
 
 The ship starts by facing **east**. Only the L and R actions change the direction the ship is facing.
 (That is, if the ship is facing east and the next instruction is N10, the ship would move north 10 units, but would still move east if the following action were F.)
@@ -173,13 +173,13 @@ Before you can give the destination to the captain, you realize that the actual 
 
 Almost all of the actions indicate how to move a **waypoint** which is relative to the ship's position:
 
--Action N means to move the waypoint north by the given value.
--Action S means to move the waypoint south by the given value.
--Action E means to move the waypoint east by the given value.
--Action W means to move the waypoint west by the given value.
--Action L means to rotate the waypoint around the ship left (counter-clockwise) the given number of degrees.
--Action R means to rotate the waypoint around the ship right (clockwise) the given number of degrees.
--Action F means to move forward to the waypoint a number of times equal to the given value.
+*-*Action N means to move the waypoint north by the given value.
+*-*Action S means to move the waypoint south by the given value.
+*-*Action E means to move the waypoint east by the given value.
+*-*Action W means to move the waypoint west by the given value.
+*-*Action L means to rotate the waypoint around the ship left (counter*-*clockwise) the given number of degrees.
+*-*Action R means to rotate the waypoint around the ship right (clockwise) the given number of degrees.
+*-*Action F means to move forward to the waypoint a number of times equal to the given value.
 
 The waypoint starts **10 units east and 1 unit north** relative to the ship.
 The waypoint is relative to the ship; that is, if the ship moves, the waypoint moves with it.
