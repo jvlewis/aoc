@@ -1,13 +1,13 @@
 const fs = require("fs");
 
 const year = new Date().getFullYear();
-const accounts = fs.readFileSync("account.txt", "utf-8");
+const accounts = fs.readFileSync("account.txt", "utf-8").split("\r\n");
 
 const findProductOfTwo = (ledger) => {
   let pastValues = [];
   let firstVal, temp;
 
-  ledger = ledger.split("\r\n");
+  ledger = ledger;
 
   for (i in ledger) {
     firstVal = Number(ledger[i]);
@@ -21,7 +21,7 @@ const findProductOfTwo = (ledger) => {
 const findProductOfThree = (ledger) => {
   let pastValues = [];
   let firstVal, secondVal, temp;
-  ledger = ledger.split("\r\n");
+  ledger = ledger;
 
   for (i in ledger) {
     firstVal = Number(ledger[i]);
