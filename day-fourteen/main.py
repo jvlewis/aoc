@@ -10,7 +10,7 @@ def countOccurences(ch, strList):
   return result
 
 def bitMaskValues(instructions):
-    memory = [0] * (2**16)
+    memory = {}
     mask = ''
 
     for x in range(len(instructions)):
@@ -32,7 +32,7 @@ def bitMaskValues(instructions):
         
             memory[addr] = int("".join(val), 2)
 
-    print(sum(memory))
+    print(sum(memory.values()))
 
 def bitMaskAddr(instructions):
     memory = {}
@@ -66,7 +66,7 @@ def bitMaskAddr(instructions):
 
                 temp = int("".join(newAddr).lstrip('0'), 2)
                 memory[temp] = val
-                
+
     print(sum(memory.values()))
 
 bitMaskValues(INSTRUCTIONS)
