@@ -1,11 +1,11 @@
 START_NUMS = list(map(int, open("input.txt", "r").read().split(",")))
 
-def playElvenMemoryGame(firstNums, lastTurn):
+def playElvenMemoryGame(lastTurn):
     pastRounds = {}
-    lastNum = firstNums[-1]
-    turn = len(firstNums)
+    lastNum = START_NUMS[-1]
+    turn = len(START_NUMS)
 
-    for i, k in enumerate(firstNums):
+    for i, k in enumerate(START_NUMS):
         pastRounds[k] = i + 1 
 
     while turn <= lastTurn:
@@ -23,8 +23,9 @@ def playElvenMemoryGame(firstNums, lastTurn):
         turn += 1 
 
 if __name__ == '__main__':
+    nums = ", ".join(map(str, START_NUMS))
     print("The 2020th number of the sequence that begins with [%s] is: %d" % 
-        (", ".join(map(str, START_NUMS)), playElvenMemoryGame(START_NUMS, 2020)))
+        (nums, playElvenMemoryGame(2020)))
     print("The 30 millionth number of the sequence that begins with [%s] is: %d" % 
-        (", ".join(map(str, START_NUMS)), playElvenMemoryGame(START_NUMS, 30000000)))
+        (nums, playElvenMemoryGame(30000000)))
     
