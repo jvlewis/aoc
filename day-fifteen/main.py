@@ -26,6 +26,6 @@ if __name__ == '__main__':
     nums = ", ".join(map(str, START_NUMS))
     print("The 2020th number of the sequence that begins with [%s] is: %d" % 
         (nums, playElvenMemoryGame(2020)))
-    print("The 30 millionth number of the sequence that begins with [%s] is: %d" % 
-        (nums, playElvenMemoryGame(30000000)))
+    print("The 3 billionth number of the sequence that begins with [%s] is: %d" % 
+        (nums, playElvenMemoryGame(3000000000)))
     
