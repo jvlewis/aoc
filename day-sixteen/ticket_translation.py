@@ -69,7 +69,7 @@ def findRuleOrder(rules, near):
                 if pos is not False:
                     continue 
                 for temp in near:
-                    if not ((temp[i] >= rule[0][0] and temp[i] <= rule[0][1]) or (temp[i] >= rule[1][0] and temp[i] <= rule[1][1])):
+                    if not (validTicket(temp[i], [rule])):
                         valid = False 
                 if valid:
                     possible.append(i)
