@@ -1,10 +1,3 @@
-# AOC Day 2
-
-# returns an array of file lines
-def retrieveInput(file):
-  return open(file, "r").read().splitlines()
-
-
 def processPasswords(rulesAndWords):
     valid = 0
 
@@ -41,6 +34,7 @@ def processPasswordsTwo(rulesAndWords):
             continue
 
     return valid
+input = open(file, "r").read().splitlines()
 
-print(processPasswords(retrieveInput("input.txt")))
-print(processPasswordsTwo(retrieveInput("input.txt")))
+print(processPasswords(input))
+print(processPasswordsTwo(input))

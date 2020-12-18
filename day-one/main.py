@@ -1,14 +1,3 @@
-# returns an array of file lines
-def retrieveInput(file):
-  return open(file, "r").read().splitlines()
-
-# brute force
-# def sumTwoN(values, n):
-#   for i in values:
-#     for j in values[1:]:
-#       return int(i) * int(j)
-#   return -1
-
 # first solution
 def productTwoN(values, n):
   pastVals = []
@@ -37,7 +26,9 @@ def productThreeN(values, target):
     
 def main():
   try:
-    print(productThreeN(retrieveInput("account.txt"), 2020))
+    input = open("account.txt", "r").read().splitlines()
+    print(productTwoN(input, 2020))
+    print(productThreeN(input, 2020))
   except ValueError:
     print("Only integers allowed.")
   except:

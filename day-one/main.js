@@ -1,13 +1,11 @@
 const fs = require("fs");
 
-const year = new Date().getFullYear();
+const year = 2020;
 const accounts = fs.readFileSync("account.txt", "utf-8").split("\r\n");
 
 const findProductOfTwo = (ledger) => {
   let pastValues = [];
   let firstVal, temp;
-
-  ledger = ledger;
 
   for (i in ledger) {
     firstVal = Number(ledger[i]);

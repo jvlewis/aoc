@@ -1,8 +1,6 @@
-# AOC Day 3
-
 path = open("input.txt", "r").read().splitlines()
 
-def countAllTrees(right, down):
+def countTrees(right, down):
     count = 0
     currDistance = right
     for i in range(down, len(path), down):
@@ -11,5 +9,7 @@ def countAllTrees(right, down):
         currDistance += right 
     return count
 
-
-print(countAllTrees(1, 1) * countAllTrees(3, 1) * countAllTrees(5, 1) * countAllTrees(7, 1) * countAllTrees(1, 2))
+print("P1-Trees encountered in path R3D1: %d" % countTrees(3, 1))
+print("P2-Trees encountered in all given paths : %d" %
+    (countTrees(1, 1) * countTrees(3, 1) * countTrees(5, 1) * 
+        countTrees(7, 1) * countTrees(1, 2)))

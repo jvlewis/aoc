@@ -1,17 +1,10 @@
 const fs = require("fs");
 
-const rightThreeDownOne = (path) => {
-  let right = 0;
-  path.shift();
-
-  return path.reduce((trees, cur) => {
-    return (trees += cur[(right += 3) % cur.length] === "#" ? 1 : 0);
-  }, 0);
-};
-
 const prodAllSlopes = (path) => {
   let R1D1 = (R3D1 = R5D1 = R7D1 = R1D2 = 0);
   let i1 = (i2 = i3 = i4 = i5 = 0);
+  path.shift();
+
   for (let i = 0; i < path.length; ++i) {
     R1D1 += path[i][(i1 += 1) % path[i].length] === "#" ? 1 : 0;
     R3D1 += path[i][(i2 += 3) % path[i].length] === "#" ? 1 : 0;
@@ -21,10 +14,11 @@ const prodAllSlopes = (path) => {
       R1D2 += path[i][(i5 += 1) % path[i].length] === "#" ? 1 : 0;
     }
   }
+  console.log("P1-Trees encountered in path R3D1: " + R3D1);
   return R1D1 * R3D1 * R5D1 * R7D1 * R1D2;
 };
 
 const pathway = fs.readFileSync("input.txt", "utf-8").split("\r\n");
-
-console.log(rightThreeDownOne(pathway));
-console.log(prodAllSlopes(pathway));
+console.log(
+  "P2-Trees encountered in all given slopes: " + prodAllSlopes(pathway)
+);
