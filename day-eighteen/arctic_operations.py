@@ -39,7 +39,7 @@ def evalExp(expressions: list, flipped=False):
         return curr 
 
 # reduce all addition expressions in the string of expressions
-# after removing addition operations, eval the final string
+# then eval the final string
 def applyAdvRules(exp: str):
     temp = exp
     while '+' in temp:
