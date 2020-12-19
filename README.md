@@ -387,3 +387,23 @@ Each cube only ever considers its **neighbors**: any of the 80 other cubes where
 The initial state of the pocket dimension still consists of a small flat region of cubes. Furthermore, the same rules for cycle updating still apply: during each cycle, consider the **number of active neighbors** of each cube.
 
 Starting with your given initial configuration, simulate six cycles in a 4-dimensional space. **How many cubes are left in the active state after the sixth cycle?**
+
+## Day 18: Operation Order
+
+As you look out the window and notice a heavily-forested continent slowly appear over the horizon, you are interrupted by the child sitting next to you. They're curious if you could help them with their math homework.
+
+Unfortunately, it seems like this "math" **follows different rules** than you remember.
+
+The homework (your puzzle input) consists of a series of expressions that consist of addition (+), multiplication (\*), and parentheses ((...)). Just like normal math, parentheses indicate that the expression inside must be evaluated before it can be used by the surrounding expression. Addition still finds the sum of the numbers on both sides of the operator, and multiplication still finds the product.
+
+However, the rules of **operator precedence** have changed. Rather than evaluating multiplication before addition, the operators have the **same precedence**, and are evaluated left-to-right regardless of the order in which they appear.
+
+Before you can help with the homework, you need to understand it yourself. **Evaluate the expression on each line of the homework; what is the sum of the resulting values?**
+
+### Part Two
+
+You manage to answer the child's questions and they finish part 1 of their homework, but get stuck when they reach the next section: **advanced** math.
+
+Now, addition and multiplication have **different** precedence levels, but they're not the ones you're familiar with. Instead, addition is evaluated **before** multiplication.
+
+**What do you get if you add up the results of evaluating the homework problems using these new rules?**
