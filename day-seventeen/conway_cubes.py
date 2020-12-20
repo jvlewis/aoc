@@ -73,5 +73,5 @@ if __name__ == "__main__":
 
   print('The cube has %d active cubes after %d cycles.' 
     % (sum(1 for x in cube3.values() if x == active), cycles))
-  print('The cube has %d active cubes after %d cycles.' 
+  print('The hypercube has %d active cubes after %d cycles.' 
     % (sum(1 for x in cube4.values() if x == active), cycles))
