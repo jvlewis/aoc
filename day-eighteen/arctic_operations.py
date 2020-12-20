@@ -91,8 +91,9 @@ def doHomework(input, adv):
             total += evalExp(exp)
     return total
 
-print('The sum of all result values in part 1: %d' % doHomework(input, False))
-print('The sum of all result values in part 2: %d' % doHomework(input, True))
+if __name__ == "__main__":
+    print('The sum of all result values in part 1: %d' % doHomework(input, False))
+    print('The sum of all result values in part 2: %d' % doHomework(input, True))
 
 
 
