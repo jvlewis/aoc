@@ -65,13 +65,13 @@ if __name__ == "__main__":
   cycles = 6
   active = '#'
   cube3 = initializeCube(initialState, 3)
-  cube4 = initializeCube(initialState, 4)
+  hCube = initializeCube(initialState, 4)
 
   for _ in range(cycles):
     cube3 = cycleCube3D(cube3)
-    cube4 = cycleCube4D(cube4)
+    hCube= cycleCube4D(hCube)
 
   print('The cube has %d active cubes after %d cycles.' 
     % (sum(1 for x in cube3.values() if x == active), cycles))
   print('The hypercube has %d active cubes after %d cycles.' 
-    % (sum(1 for x in cube4.values() if x == active), cycles))
+    % (sum(1 for x in hCube.values() if x == active), cycles))
