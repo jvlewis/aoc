@@ -50,10 +50,12 @@ def returnEdgeMatches(edges):
 def returnCornerProd(matches): 
     return reduce(mul, [id for id, x in matches.items() if x == 2], 1)
 
+# tbc...
 def returnTileOrder(matches, edges):
     gridDims = int(math.sqrt(len(matches)))
     order = [[0 for i in range(gridDims)] for j in range(gridDims)]
     print(edges.values())
+# ....
 
 if __name__ == '__main__':
     input = open("tiles.txt", "r").read().splitlines()
