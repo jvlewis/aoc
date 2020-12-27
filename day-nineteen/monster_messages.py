@@ -19,7 +19,6 @@ def returnRulesAndMessages():
     return rules, messages
 
 def isMatch(msg, rule):
-    
     if len(rule) == 0:
         return len(msg) == len(rule)  
     elif len(rule) > len(msg):
@@ -50,7 +49,7 @@ def sumValidMessages(messages, rules, swapped=False):
 
 if __name__ == '__main__':
     rules, messages = returnRulesAndMessages()
-    print(rules)
+    
     print('There are %d valid messages in the list before changing rules 8 and 11.' 
         % sumValidMessages(messages, rules))
     print('There are %d valid messages in the list after changing rules 8 and 11.'
