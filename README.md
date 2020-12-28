@@ -535,3 +535,78 @@ Fortunately, it doesn't take long to teach the crab the rules.
 Before the game starts, split the cards so each player has their own deck (your puzzle input). Then, the game consists of a series of **rounds**: both players draw their top card, and the player with the higher-valued card wins the round. The winner keeps both cards, placing them on the bottom of their own deck so that the winner's card is above the other card. If this causes a player to have all of the cards, they win, and the game ends.
 
 Play the small crab in a game of Combat using the two decks you just dealt. **What is the winning player's score?**
+
+### Part Two
+
+You lost to the small crab! Fortunately, crabs aren't very good at recursion. To defend your honor as a Raft Captain, you challenge the small crab to a game of **Recursive Combat**.
+
+Recursive Combat still starts by splitting the cards into two decks (you offer to play with the same starting decks as before - it's only fair). Then, the game consists of a series of **rounds** with a few changes:
+
+> Before either player deals a card, if there was a previous round in this game that had exactly the same cards in the same order in the same players' decks, the game instantly ends in a win for player 1. Previous rounds from other games are not considered. (This prevents infinite games of Recursive Combat, which everyone agrees is a bad idea.)
+> Otherwise, this round's cards must be in a new configuration; the players begin the round by each drawing the top card of their deck as normal.
+> If both players have at least as many cards remaining in their deck as the value of the card they just drew, the winner of the round is determined by playing a new game of Recursive Combat (see below).
+> Otherwise, at least one player must not have enough cards left in their deck to recurse; the winner of the round is the player with the higher-value card.
+
+As in regular Combat, the winner of the round (even if they won the round by winning a sub-game) takes the two cards dealt at the beginning of the round and places them on the bottom of their own deck (again so that the winner's card is above the other card). Note that the winner's card might **be the lower-valued of the two cards** if they won the round due to winning a sub-game. If collecting cards by winning the round causes a player to have all of the cards, they win, and the game ends.
+
+Defend your honor as Raft Captain by playing the small crab in a game of Recursive Combat using the same two decks as before. **What is the winning player's score?**
+
+## Day 23: Crab Cups
+
+The small crab challenges **you** to a game! The crab is going to mix up some cups, and you have to predict where they'll end up.
+
+The cups will be arranged in a circle and labeled **clockwise** (your puzzle input). For example, if your labeling were 32415, there would be five cups in the circle; going clockwise around the circle from the first cup, the cups would be labeled 3, 2, 4, 1, 5, and then back to 3 again.
+
+Before the crab starts, it will designate the first cup in your list as the **current cup**. The crab is then going to do **100 moves**.
+
+Each **move**, the crab does the following actions:
+
+> The crab picks up the **three cups** that are immediately **clockwise** of the current cup. They are removed from the circle; cup spacing is adjusted as necessary to maintain the circle.
+> The crab selects a **destination cup**: the cup with a **label** equal to the **current cup's** label minus one. If this would select one of the cups that was just picked up, the crab will keep subtracting one until it finds a cup that wasn't just picked up. If at any point in this process the value goes below the lowest value on any cup's label, it **wraps around** to the highest value on any cup's label instead.
+> The crab places the cups it just picked up so that they are **immediately clockwise** of the destination cup. They keep the same order as when they were picked up.
+> The crab selects a new **current cup**: the cup which is immediately clockwise of the current cup.
+
+Using your labeling, simulate 100 moves. **What are the labels on the cups after cup 1?**
+
+### Part Two
+
+Due to what you can only assume is a mistranslation (you're not exactly fluent in Crab), you are quite surprised when the crab starts arranging **many** cups in a circle on your raft - **one million** (1000000) in total.
+
+Your labeling is still correct for the first few cups; after that, the remaining cups are just numbered in an increasing fashion starting from the number after the highest number in your list and proceeding one by one until one million is reached. (For example, if your labeling were 54321, the cups would be numbered 5, 4, 3, 2, 1, and then start counting up from 6 until one million is reached.) In this way, every number from one through one million is used exactly once.
+
+After discovering where you made the mistake in translating Crab Numbers, you realize the small crab isn't going to do merely 100 moves; the crab is going to do **ten million** (10000000) moves!
+
+The crab is going to hide your stars - one each - under the **two cups that will end up immediately clockwise of cup 1**. You can have them if you predict what the labels on those cups will be when the crab is finished.
+
+Determine which two cups will end up immediately clockwise of cup 1. **What do you get if you multiply their labels together?**
+
+## Day 24: Lobby Layout
+
+Your raft makes it to the tropical island; it turns out that the small crab was an excellent navigator. You make your way to the resort.
+
+As you enter the lobby, you discover a small problem: the floor is being renovated. You can't even reach the check-in desk until they've finished installing the **new tile floor**.
+
+The tiles are all **hexagonal**; they need to be arranged in a **hex grid** with a very specific color pattern. Not in the mood to wait, you offer to help figure out the pattern.
+
+The tiles are all **white** on one side and **black** on the other. They start with the white side facing up. The lobby is large enough to fit whatever pattern might need to appear there.
+
+A member of the renovation crew gives you a **list of the tiles that need to be flipped over** (your puzzle input). Each line in the list identifies a single tile that needs to be flipped by giving a series of steps starting from a **reference tile** in the very center of the room. (Every line starts from the same reference tile.)
+
+Because the tiles are hexagonal, every tile has **six neighbors**: east, southeast, southwest, west, northwest, and northeast. These directions are given in your list, respectively, as e, se, sw, w, nw, and ne. A tile is identified by a series of these directions with **no delimiters**; for example, esenee identifies the tile you land on if you start at the reference tile and then move one tile east, one tile southeast, one tile northeast, and one tile east.
+
+Each time a tile is identified, it flips from white to black or from black to white. Tiles might be flipped more than once. For example, a line like esew flips a tile immediately adjacent to the reference tile, and a line like nwwswee flips the reference tile itself.
+
+Go through the renovation crew's list and determine which tiles they need to flip. After all of the instructions have been followed, **how many tiles are left with the black side up?**
+
+### Part Two
+
+The tile floor in the lobby is meant to be a living art exhibit. Every day, the tiles are all flipped according to the following rules:
+
+> Any **black** tile with **zero** or **more than 2** black tiles immediately adjacent to it is flipped to **white**.
+> Any **white** tile with **exactly 2** black tiles immediately adjacent to it is flipped to **black**.
+
+Here, **tiles immediately adjacent** means the six tiles directly touching the tile in question.
+
+The rules are applied **simultaneously** to every tile; put another way, it is first determined which tiles need to be flipped, then they are all flipped at the same time.
+
+**How many tiles will be black after 100 days?**
