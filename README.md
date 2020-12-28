@@ -542,10 +542,10 @@ You lost to the small crab! Fortunately, crabs aren't very good at recursion. To
 
 Recursive Combat still starts by splitting the cards into two decks (you offer to play with the same starting decks as before - it's only fair). Then, the game consists of a series of **rounds** with a few changes:
 
-> Before either player deals a card, if there was a previous round in this game that had exactly the same cards in the same order in the same players' decks, the game instantly ends in a win for player 1. Previous rounds from other games are not considered. (This prevents infinite games of Recursive Combat, which everyone agrees is a bad idea.)
-> Otherwise, this round's cards must be in a new configuration; the players begin the round by each drawing the top card of their deck as normal.
-> If both players have at least as many cards remaining in their deck as the value of the card they just drew, the winner of the round is determined by playing a new game of Recursive Combat (see below).
-> Otherwise, at least one player must not have enough cards left in their deck to recurse; the winner of the round is the player with the higher-value card.
+- Before either player deals a card, if there was a previous round in this game that had exactly the same cards in the same order in the same players' decks, the game instantly ends in a win for player 1. Previous rounds from other games are not considered. (This prevents infinite games of Recursive Combat, which everyone agrees is a bad idea.)
+- Otherwise, this round's cards must be in a new configuration; the players begin the round by each drawing the top card of their deck as normal.
+- If both players have at least as many cards remaining in their deck as the value of the card they just drew, the winner of the round is determined by playing a new game of Recursive Combat (see below).
+- Otherwise, at least one player must not have enough cards left in their deck to recurse; the winner of the round is the player with the higher-value card.
 
 As in regular Combat, the winner of the round (even if they won the round by winning a sub-game) takes the two cards dealt at the beginning of the round and places them on the bottom of their own deck (again so that the winner's card is above the other card). Note that the winner's card might **be the lower-valued of the two cards** if they won the round due to winning a sub-game. If collecting cards by winning the round causes a player to have all of the cards, they win, and the game ends.
 
@@ -561,10 +561,10 @@ Before the crab starts, it will designate the first cup in your list as the **cu
 
 Each **move**, the crab does the following actions:
 
-> The crab picks up the **three cups** that are immediately **clockwise** of the current cup. They are removed from the circle; cup spacing is adjusted as necessary to maintain the circle.
-> The crab selects a **destination cup**: the cup with a **label** equal to the **current cup's** label minus one. If this would select one of the cups that was just picked up, the crab will keep subtracting one until it finds a cup that wasn't just picked up. If at any point in this process the value goes below the lowest value on any cup's label, it **wraps around** to the highest value on any cup's label instead.
-> The crab places the cups it just picked up so that they are **immediately clockwise** of the destination cup. They keep the same order as when they were picked up.
-> The crab selects a new **current cup**: the cup which is immediately clockwise of the current cup.
+- The crab picks up the **three cups** that are immediately **clockwise** of the current cup. They are removed from the circle; cup spacing is adjusted as necessary to maintain the circle.
+- The crab selects a **destination cup**: the cup with a **label** equal to the **current cup's** label minus one. If this would select one of the cups that was just picked up, the crab will keep subtracting one until it finds a cup that wasn't just picked up. If at any point in this process the value goes below the lowest value on any cup's label, it **wraps around** to the highest value on any cup's label instead.
+- The crab places the cups it just picked up so that they are **immediately clockwise** of the destination cup. They keep the same order as when they were picked up.
+- The crab selects a new **current cup**: the cup which is immediately clockwise of the current cup.
 
 Using your labeling, simulate 100 moves. **What are the labels on the cups after cup 1?**
 
@@ -602,8 +602,8 @@ Go through the renovation crew's list and determine which tiles they need to fli
 
 The tile floor in the lobby is meant to be a living art exhibit. Every day, the tiles are all flipped according to the following rules:
 
-> Any **black** tile with **zero** or **more than 2** black tiles immediately adjacent to it is flipped to **white**.
-> Any **white** tile with **exactly 2** black tiles immediately adjacent to it is flipped to **black**.
+- Any **black** tile with **zero** or **more than 2** black tiles immediately adjacent to it is flipped to **white**.
+- Any **white** tile with **exactly 2** black tiles immediately adjacent to it is flipped to **black**.
 
 Here, **tiles immediately adjacent** means the six tiles directly touching the tile in question.
 
