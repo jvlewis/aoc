@@ -20,7 +20,7 @@ Specifically, they need you to **find the two entries that sum to 2020** and the
 
 **Find the two entries that sum to 2020; what do you get if you multiply them together?**
 
-### Part Two
+##
 
 The Elves in accounting are thankful for your help; one of them even offers you a starfish coin they had left over from a past vacation.
 They offer you a second one if you can find **three numbers** in your expense report that meet the same criteria.
@@ -44,7 +44,7 @@ Each line gives the password policy and then the password. The password policy i
 
 **How many passwords are valid** according to their policies?
 
-### Part Two
+##
 
 While it appears you validated the passwords correctly, they don't seem to be what the Official Toboggan Corporate Authentication System is expecting.
 
@@ -68,7 +68,7 @@ From your starting position at the top-left, check the position that is right 3 
 
 Starting at the top-left corner of your map and following a slope of right 3 and down 1, **how many trees would you encounter?**
 
-### Part Two
+##
 
 Time to check the rest of the slopes - you need to minimize the probability of a sudden arboreal stop, after all.
 
@@ -127,7 +127,7 @@ differences between the charging outlet, the adapters, and your device.
 
 **What is the number of 1-jolt differences multiplied by the number of 3-jolt differences?**
 
-### Part Two
+##
 
 To completely determine whether you have enough adapters, you'll need to figure out how many different ways they can be arranged.
 Every arrangement needs to connect the charging outlet to your device. The previous rules about when adapters can successfully connect still apply.
@@ -157,7 +157,7 @@ At a certain point, the chaos stabilizes and further applications of these rules
 
 Simulate your seating area by applying the seating rules repeatedly until no seats change state. **How many seats end up occupied?**
 
-### Part Two
+##
 
 As soon as people start to arrive, you realize your mistake. People don't just care about adjacent seats _-_
 they care about **the first seat they can see** in each of those eight directions!
@@ -196,7 +196,7 @@ The ship starts by facing **east**. Only the L and R actions change the directio
 
 Figure out where the navigation instructions lead. **What is the Manhattan distance between that location and the ship's starting position?**
 
-### Part Two
+##
 
 Before you can give the destination to the captain, you realize that the actual action meanings were printed on the back of the instructions the whole time.
 
@@ -239,7 +239,7 @@ To save time once you arrive, your goal is to figure out **the earliest bus you 
 
 **What is the ID of the earliest bus you can take to the airport multiplied by the number of minutes you'll need to wait for that bus?**
 
-### Part Two
+##
 
 The shuttle company is running a contest: one gold coin for anyone that can find the earliest timestamp
 such that the first bus ID departs at that time and each subsequent listed bus ID departs at that subsequent minute.
@@ -262,7 +262,7 @@ The bitmask is always given as a string of 36 bits, written with the most signif
 
 **Execute the initialization program. What is the sum of all values left in memory after it completes?**
 
-### Part Two
+##
 
 For some reason, the sea port's computer system still can't communicate with your ferry's docking program. It must be using version 2 of the decoder chip!
 
@@ -315,7 +315,7 @@ Here are a few more examples:
 - Given the starting numbers 3,1,2, the 2020th number spoken is 1836.
 - Given your starting numbers, what will be the 2020th number spoken?
 
-### Part Two
+##
 
 Impressed, the Elves issue you a challenge: determine the 30000000th number spoken. For example, given the same starting numbers as above:
 
@@ -345,7 +345,7 @@ It doesn't matter which position corresponds to which field; you can identify in
 
 Consider the validity of the nearby tickets you scanned. What is your ticket scanning error rate?
 
-### Part Two
+##
 
 Now that you've identified which tickets contain invalid values, **discard those tickets entirely**. Use the remaining valid tickets to determine which field is which.
 
@@ -376,7 +376,7 @@ The engineers responsible for this experimental energy source would like you to 
 
 Starting with your given initial configuration, simulate six cycles. **How many cubes are left in the active state after the sixth cycle?**
 
-### Part Two
+##
 
 For some reason, your simulated results don't match what the experimental energy source engineers expected. Apparently, the pocket dimension actually has **four spatial dimensions**, not three.
 
@@ -400,7 +400,7 @@ However, the rules of **operator precedence** have changed. Rather than evaluati
 
 Before you can help with the homework, you need to understand it yourself. **Evaluate the expression on each line of the homework; what is the sum of the resulting values?**
 
-### Part Two
+##
 
 You manage to answer the child's questions and they finish part 1 of their homework, but get stuck when they reach the next section: **advanced** math.
 
@@ -463,7 +463,7 @@ Your goal is to determine **the number of messages that completely match rule 0*
 
 **How many messages completely match rule 0?**
 
-### Part Two
+##
 
 As you look over the list of messages, you realize your matching rules aren't quite right. To fix them, completely replace rules 8: 42 and 11: 42 31 with the following:
 
@@ -492,7 +492,7 @@ To show how the tiles should be reassembled, each tile's image data includes a b
 
 Assemble the tiles into an image. **What do you get if you multiply together the IDs of the four corner tiles?**
 
-## Part Two
+### Part Two
 
 Now, you're ready to **check the image for sea monsters**.
 
@@ -518,7 +518,7 @@ Each allergen is found in exactly one ingredient. Each ingredient contains zero 
 
 Determine which ingredients cannot possibly contain any of the allergens in your list. **How many times do any of those ingredients appear?**
 
-### Part Two
+##
 
 Now that you've isolated the inert ingredients, you should have enough information to figure out which ingredient contains which allergen.
 
@@ -536,7 +536,7 @@ Before the game starts, split the cards so each player has their own deck (your 
 
 Play the small crab in a game of Combat using the two decks you just dealt. **What is the winning player's score?**
 
-### Part Two
+##
 
 You lost to the small crab! Fortunately, crabs aren't very good at recursion. To defend your honor as a Raft Captain, you challenge the small crab to a game of **Recursive Combat**.
 
@@ -568,7 +568,7 @@ Each **move**, the crab does the following actions:
 
 Using your labeling, simulate 100 moves. **What are the labels on the cups after cup 1?**
 
-### Part Two
+##
 
 Due to what you can only assume is a mistranslation (you're not exactly fluent in Crab), you are quite surprised when the crab starts arranging **many** cups in a circle on your raft - **one million** (1000000) in total.
 
@@ -598,7 +598,7 @@ Each time a tile is identified, it flips from white to black or from black to wh
 
 Go through the renovation crew's list and determine which tiles they need to flip. After all of the instructions have been followed, **how many tiles are left with the black side up?**
 
-### Part Two
+##
 
 The tile floor in the lobby is meant to be a living art exhibit. Every day, the tiles are all flipped according to the following rules:
 
