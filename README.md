@@ -598,7 +598,7 @@ Each time a tile is identified, it flips from white to black or from black to wh
 
 Go through the renovation crew's list and determine which tiles they need to flip. After all of the instructions have been followed, **how many tiles are left with the black side up?**
 
-### Part 3
+### Part 2
 
 The tile floor in the lobby is meant to be a living art exhibit. Every day, the tiles are all flipped according to the following rules:
 
